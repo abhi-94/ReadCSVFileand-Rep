@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
+import { Redirect, Route, Switch } from 'react-router';
 import './App.css';
+import FormInputdata from './Components/Forms/Form';
+import ShowData from './Components/UI/ShowData';
 
 function App() {
+  const [IsShow, setIsShow] = useState(false)
+  const ShowHandler = () =>{
+    IsShow? setIsShow(false): setIsShow(true)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+    <Route path="/Input">
+      {!IsShow && <FormInputdata onShow={ShowHandler} />}
+      {IsShow && <ShowData />}
+    </Route>
+    <Route path='*'>
+      <Redirect to='/Input' />
+    </Route>
+    </Switch>
   );
 }
 
 export default App;
+

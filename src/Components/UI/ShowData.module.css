@@ -1,0 +1,47 @@
+.section {
+  width: 90%;
+  margin: 3rem auto;
+  background-color: white;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.section label {
+  font: inherit;
+  font-size: x-large;
+  font-weight: bold;
+  flex: 1;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.record-head {
+  display: flex;
+  width: 90%;
+  background-color: whitesmoke;
+  flex-direction: row;
+  border-bottom: lemonchiffon solid;
+}
+.record-head div {
+  padding: 1rem;
+  width: 18%;
+  padding-left: 2rem;
+}
+.record {
+  display: flex;
+  flex-direction: column;
+}
+.record div {
+  padding: 1rem;
+  background-color: white;
+  padding-left: 2rem;
+  border-bottom: wheat solid;
+}
+.tabl {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
